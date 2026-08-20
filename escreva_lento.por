@@ -17,8 +17,6 @@ programa
 			
 
 		}
-
-		escreva(texto)
 		
 	}
 	
