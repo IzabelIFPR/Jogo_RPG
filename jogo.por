@@ -5,7 +5,9 @@ programa
 
 	cadeia global_gen
 	const inteiro velo = 1
-	logico tem_comida = falso //determina se ainda tem comida ou não
+	inteiro tem_comida = 0 //determina se ainda tem comida ou não
+	inteiro t
+	
 	
 	inteiro v
 	cadeia nome
@@ -790,7 +792,7 @@ escreva("`'-._|                           \\\\\\\\\\\\ \n")
 		
 	}
 
-	funcao logico escolhas6(){
+	funcao inteiro escolhas6(){
 
 		
 	
@@ -822,7 +824,9 @@ escreva("`'-._|                           \\\\\\\\\\\\ \n")
 		escLen("\nVocês dois se levantam e seguem jornada")
 		limpa()
 
-		retorne tem_comida == falso
+		t = 0
+		retorne tem_comida = 1
+		
 		}
 
 		senao se(escolha6 == 2){
@@ -838,7 +842,9 @@ escreva("`'-._|                           \\\\\\\\\\\\ \n")
 		escLen("\nVocês voltam a andar")
 		limpa()	
 
-		retorne tem_comida == verdadeiro
+		t = 1
+		retorne tem_comida = t
+		
 		}
 
 		senao{
@@ -847,7 +853,8 @@ escreva("`'-._|                           \\\\\\\\\\\\ \n")
 		escLen("\nVocê precisa escolher entre A e B.\n")
 		limpa()
 		escolhas6()
-		retorne tem_comida == falso //Tem que arrumar isso aqui.
+		
+		retorne tem_comida = t //Tem que arrumar isso aqui.
 		}
 
 		
@@ -860,9 +867,105 @@ escreva("`'-._|                           \\\\\\\\\\\\ \n")
 	escLen("\nESCOLHAS\n")
 	escLen("\nA) Tentar atacá-la. Digite 1\n")
 	escLen("\nB) Tentar recuar e não parecer ameaçador. Digite 2\n")
-	se(tem_comida == verdadeiro){
+	se(tem_comida == 1){
 	escLen(opcao_c)}
 	leia(escolha7)
+
+		se(escolha7 == 1){
+			//OPÇÃO A - ERRADO
+
+		escLen("\nVocê observa a grifa por alguns segundos.")
+		escLen("\nEla parece cansada. Sua barriga está inchada, e seus passos são lentos.")
+		escLen("\nMas ainda é um monstro. E monstros são perigosos.")
+		escLen("\nVocê se abaixa lentamente até o chão, pegando um pedaço grosso de madeira do chão e o empunhando.")
+		escLen("\nOnix percebe o movimento.")
+		escLen("\nONIX: ")
+		escLen("\nVocê tá pensando em fazer o quê?.")
+		escreva("\n", nome, ": ")
+		escLen("\nSe ela atacar, precisamos estar preparados.")
+		escLen("\nONIX: ")
+		escLen("\nMas ela nem fez nada ainda!\n")
+		escLen("\nA grifa ergue a cabeça. Seus olhos parecem encontrar os seus.")
+		escLen("\nPor um instante, tudo parece ficar parado.")
+		escLen("\nEntão, a grifa abre as asas.")
+		escLen("\nOnix recua.")
+		escLen("\nONIX: ")
+		escLen("\nAh, droga.\n")
+		escLen("\nA criatura avança.")
+		escLen("\nVocê tenta desviar, mas suas garras atingem seu peito, jogando você contra uma árvore.")
+		escLen("\nA dor é imediata.")
+		escLen("\nOnix grita e tenta correr até você, mas a grifa se vira em sua direção.")
+		escLen("\nVocê tenta se levantar, mas é tarde demais.")
+		escLen("\nA criatura avança novamente.")
+		escLen("\nA última coisa que vê é Onix tentando proteger você.")
+		
+		}
+		senao se(escolha7 == 2){
+			
+			escLen("\nVocê ergue as mãos lentamente.")
+			escreva("\n", nome, ": ")
+			escLen("\nCalma...")
+			escLen("\nOnix olha para você, confusa.")
+			escLen("\nONIX: ")
+			escLen("\nCalma? Você tá falando sério?")
+			escreva("\n", nome, ": ")
+			escLen("\nNão faz movimentos bruscos. E confia em mim.\n")
+			escLen("\nA grifa permanece parada.")
+			escLen("\nSuas asas estão parcialmente abertas, e seus olhos acompanham cada movimento de vocês.")
+			escLen("\nBolota, por outro lado, não parece entender a situação.")
+			escLen("\nO cachorro dá alguns passos para a frente.\n")
+			escLen("\nONIX: ")
+			escLen("\nBolota, volta aqui. Agora.\n")
+			escLen("\nEle para.")
+			escLen("\nA grifa abaixa a cabeça, aproximando o focinho do chão.")
+			escLen("\nVocê percebe que ele está farejando.")
+			escLen("\nTalvez esteja procurando comida. Ou um lugar seguro.")
+			escLen("\nVocê não sabe.")
+			escLen("\nMas sabe que não quer descobrir o que acontece quando ela se sente ameaçada.\n")
+			escreva("\n", nome, ": ")
+			escLen("\nVamos recuar. Lentamente.\n")
+			escLen("\nVocê dá um passo para trás.")
+			escLen("\nDepois outro.")
+			escLen("\nOnix acompanha seus movimentos.")
+			escLen("\nA grifa não avança.")
+			escLen("\nPor alguns segundos, vocês continuam recuando, até que a criatura finalmente se vira e desaparece entre as árvores.")
+			escLen("\nOnix solta o ar que nem percebeu que estava segurando.\n")
+			escLen("\nONIX: ")
+			escLen("\nEu quase morri umas 3 vezes nessa floresta.")
+			escreva("\n", nome, ": ")
+			escLen("\nE ainda nem chegamos na metade.")
+			escLen("\nONIX: ")
+			escLen("\nNão precisava lembrar disso.\n")
+			escLen("\nBolota late.\n")
+			escLen("\nONIX: ")
+			escLen("\nAquieta aí, Bolota.\n")
+			escLen("\nVocê olha para o cachorro.")
+			escLen("\nEle parece estar olhando para algum ponto atrás de vocês.")
+			escLen("\nVocê franze a testa.\n")
+			escreva("\n", nome, ": ")
+			escLen("\nO que é?")
+			escLen("\nAntes que Onix possa responder, um som corta a floresta.") 
+
+		}
+			senao se(escolha7 == 3){
+
+			escLen("\nVocê abre a caixa e retira o restante da comida.\n")
+			escreva("\n", nome, ": ")
+			escLen("\nTalvez ela esteja com fome.\n")
+			escLen("\nOnix olha para a comida. Depois para a grifa.\n")
+			escLen("\nONIX: ")
+			escLen("\nVocê vai dar a nossa comida para ela?")
+			escreva("\n", nome, ": ")
+			escLen("\nEla está grávida.")
+			escLen("\nONIX: ")
+			escLen("\nAh, claro. Não sabia que tinha sido contratado como tratador de zoológico.\n")
+			escLen("\nVocê ignora o comentário e coloca a comida no chão.")
+			escLen("\nA grifa observa.")
+			escLen("\nPor alguns segundos, a mesma não se move.")
+			//escLen("\nEnt
+			
+			
+			}
 	
 
 	
@@ -874,8 +977,8 @@ escreva("`'-._|                           \\\\\\\\\\\\ \n")
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 22082; 
- * @DOBRAMENTO-CODIGO = [21, 16, 31, 42, 63, 400, 407, 442, 533, 598, 659, 722];
+ * @POSICAO-CURSOR = 19817; 
+ * @DOBRAMENTO-CODIGO = [23, 18, 33, 44, 65, 402, 409, 444, 535, 600, 661, 724];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
